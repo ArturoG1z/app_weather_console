@@ -80,7 +80,7 @@ class Searches {
     if(this.history.includes(place)) {
       return;
     }
-    this.history = [place, ...this.history]
+    this.history = [place, ...this.history.splice(0, 9)]
     saveDB({
       history: this.history
     });

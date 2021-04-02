@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { readDB, saveDB } = require("../helpers/bd");
+const { readDB, saveDB } = require("../helpers/db");
 
 class Searches {
 	history = [];

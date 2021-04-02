@@ -1,0 +1,24 @@
+{
+  "name": "005_weather_app",
+  "version": "1.0.0",
+  "description": "Weather application, consuming API's",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "api",
+    "nodejs",
+    "weather",
+    "mapbox"
+  ],
+  "author": "Felipe Arturo",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "inquirer": "^8.0.0"
+  }
+}

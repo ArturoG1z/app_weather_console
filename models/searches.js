@@ -76,8 +76,14 @@ class Searches {
     }
 	}
 
+	deleteIndexFromArray(array, index) {
+		return [...array.slice(0, index), ...array.slice(index + 1)];
+	}
+
   addToHistory(place = '') {
-    if(this.history.includes(place)) {
+		const indexPlace = this.history.indexOf(place);
+    if(indexPlace > 0) {
+			this.history = [place, ...this.deleteIndexFromArray(this.history, indexPlace)]
       return;
     }
     this.history = [place, ...this.history.splice(0, 9)]

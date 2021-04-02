@@ -1,7 +1,14 @@
 require('dotenv').config();
 const { readInput, inquirerMenu, pause, listPlaces } = require("./helpers/inquirer")
 const Searches = require("./models/searches");
+
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+const capitalizeEachWord = (str) => 
+  str.split(' ')
+    .map(word => word[0].toUpperCase() + word.substring(1))
+    .join(' ');
+
+
 const main = async() => {
   let opt = -1;
   const searches = new Searches();
